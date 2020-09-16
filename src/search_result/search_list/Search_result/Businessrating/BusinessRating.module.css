@@ -1,0 +1,14 @@
+.red{
+    color: red;
+}
+
+
+.rating{
+    display: inline-flex;
+    min-width: 80px;
+}
+
+.size{
+    margin-left: 15px;
+    color: purple;
+}
