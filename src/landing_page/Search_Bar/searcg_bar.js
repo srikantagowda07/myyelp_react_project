@@ -78,5 +78,4 @@ class Search_Bar extends React.Component {
   }
 }
 
-// export default Search_Bar;
 export default withRouter(Search_Bar); 

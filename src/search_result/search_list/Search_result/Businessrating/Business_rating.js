@@ -2,17 +2,9 @@ import React from 'react';
 import styles from './BusinessRating.module.css';
 import Rating from 'react-rating';
 
-
-
-
 class BusinessRating extends React.Component {
-
-    
-
     render() {
-
         let rating_value = this.props.value
-
         return (
             <div className={styles.rating}>
             <Rating
@@ -23,7 +15,7 @@ class BusinessRating extends React.Component {
                 initialRating={rating_value}
                 
             />
-            <p className={styles.size} > {rating_value}</p>
+            <p className={styles.size} > {rating_value} review</p>
         </div>
         
         )
