@@ -1,0 +1,43 @@
+.top_bar_containor {
+    display: flex;
+    border-bottom: 1px solid silver;
+    height: 150px;
+}
+
+
+.belb_logo {
+    display: block;
+    width: 80px;
+    height: 40px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.Search_block>* {
+    display: flex;
+    margin-top: 1rem;
+}
+.container {
+    position: absolute;
+    display: block;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-top: 2rem;
+    padding-left: 20%;
+
+}
+
+.search_bar_shape {
+    min-width: 350px;
+}
+
+:global(.button).button_red {
+    background: #bd1f1f;
+    border: none;
+}
+
+
+:global(.icon).search-icon {
+    color: white;
+}
