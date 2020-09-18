@@ -12,8 +12,7 @@ class BusinessRating extends React.Component {
                 fullSymbol=  { `fas fa-star ${styles.red}` } 
                 fractions={2}
                 readonly
-                initialRating={rating_value}
-                
+                initialRating={rating_value}          
             />
             <p className={styles.size} > {rating_value} review</p>
         </div>
