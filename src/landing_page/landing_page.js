@@ -3,7 +3,7 @@ import styles from "./landing_page.module.css";
 import Nav_bar from "./Nav_Bar/Nav_Bar";
 import logo from "../logo.png";
 import Search_Bar from "./Search_Bar/searcg_bar";
-import BusinessRating from "../search_result/search_list/Search_result/Businessrating/Business_rating";
+import Recomendation_cards from "./recomendation_cards";
 
 class LandingPage extends React.Component {
   constructor() {
@@ -19,9 +19,9 @@ class LandingPage extends React.Component {
     const API_BASE_URL = "https://api.yelp.com/v3";
     const BEARER_TOKEN =
       "ANuL0W7wntrogu2fumR35kK1Plmb1hvJ7UBAwqe5pCS1ZyZvCG-5QI957M3trI6w5k2msmYxHpFVJRSsYMwyJoL-M9PyL4jLbvkork-7yg88SLfj1M8xujjyJvdZX3Yx";
-    console.log("working");
+    console.log("fetching");
     fetch(
-      `${proxyurl}${API_BASE_URL}/businesses/search?term=restaurants&location=Rome`,
+      `${proxyurl}${API_BASE_URL}/businesses/search?term=food&location=japan`,
       {
         headers: {
           Authorization: `Bearer ${BEARER_TOKEN}`,
@@ -40,32 +40,13 @@ class LandingPage extends React.Component {
       });
   }
 
-  remove(e) {
-    let id = e.target.className;
-    var elem = document.getElementById(id);
-    elem.remove();
-  }
-
   render() {
-    console.log("landing page", this.state.fetchedData);
     if (Boolean(this.state.fetchedData)) {
-      // console.log(this.state.fetchedData.businesses, "olaa");
-      let a = this.state.fetchedData.businesses;
-      var image = a[0].image_url;
-      var name = a[0].name;
-      var rating = a[0].rating;
-
-      var image1 = a[1].image_url;
-      var name1 = a[1].name;
-      var rating1 = a[1].rating;
-
-      var image2 = a[2].image_url;
-      var name2 = a[2].name;
-      var rating2 = a[2].rating;
-
-      var image3 = a[3].image_url;
-      var name3 = a[3].name;
-      var rating3 = a[3].rating;
+      let data = this.state.fetchedData.businesses;
+      var card_1 = { image: data[0].image_url, name: data[0].name, rating: data[0].rating, id: 1 };
+      var card_2 = { image: data[1].image_url, name: data[1].name, rating: data[1].rating, id: 2 };
+      var card_3 = { image: data[2].image_url, name: data[2].name, rating: data[2].rating, id: 3 };
+      var card_4 = {  image: data[3].image_url, name: data[3].name, rating: data[3].rating, id: 4 };
     }
 
     return (
@@ -86,103 +67,19 @@ class LandingPage extends React.Component {
         <div className={styles.landing_page_recomendation_section}>
           <div className={styles.review_heading}>
             {" "}
-            <h1 style={{ fontWeight: "900" }}>Your Next Review Awaits</h1>{" "}
+            <h1  className={styles.font_weight}>Your Next Review Awaits</h1>{" "}
           </div>
 
           <div className={styles.containerflex}>
-            <div className={styles.containerflex}>
-              <div className={styles.container} id="myDiv1">
-                <img
-                  src={image}
-                  alt="business"
-                  className={styles["business-image"]}
-                />
-                <div className={styles["business-info"]}>
-                <button className="myDiv1" onClick={this.remove}>
-                    x
-                  </button>
-                  <h1 className={styles.font}>{name} </h1>
-                  <p>Help the community decide</p>
-                  <p>
-                    {" "}
-                    <span className="tag">
-                      <BusinessRating value={rating} />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Recomendation_cards value={card_1} />
 
-            <div className={styles.containerflex} >
-              <div className={styles.container} id="myDiv2">
-                <img
-                  src={image1}
-                  alt="business"
-                  className={styles["business-image"]}
-                />
-
-                <div className={styles["business-info"]}>
-                <button className="myDiv2" onClick={this.remove}>
-                    x
-                  </button>
-                  <h1 className={styles.font}>{name1} </h1>
-                  <p>Help the community decide</p>
-                  <p>
-                    {" "}
-                    <span className="tag">
-                      <BusinessRating value={rating1} />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Recomendation_cards value={card_2} />
           </div>
-          <div className={styles.containerflex}>
-            <div className={styles.containerflex}>
-              <div className={styles.container} id="myDiv3" >
-                <img
-                  src={image2}
-                  alt="business"
-                  className={styles["business-image"]}
-                />
-                <div className={styles["business-info"]}>
-                <button className="myDiv3" onClick={this.remove}>
-                    x
-                  </button>
-                  <h1 className={styles.font}>{name2} </h1>
-                  <p>Help the community decide</p>
-                  <p>
-                    {" "}
-                    <span className="tag">
-                      <BusinessRating value={rating2} />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className={styles.containerflex} >
-              <div className={styles.container} id="myDiv4" >
-                <img
-                  src={image3}
-                  alt="business"
-                  className={styles["business-image"]}
-                />
-                <div className={styles["business-info"]}>
-                  <button className="myDiv4" onClick={this.remove}>
-                    x
-                  </button>
-                  <h1 className={styles.font}>{name3} </h1>
-                  <p>Help the community decide</p>
-                  <p>
-                    {" "}
-                    <span className="tag">
-                      <BusinessRating value={rating3} />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className={styles.containerflex}>
+            <Recomendation_cards value={card_3} />
+
+            <Recomendation_cards value={card_4} />
           </div>
         </div>
       </div>
