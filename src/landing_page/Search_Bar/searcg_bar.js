@@ -14,19 +14,14 @@ class Search_Bar extends React.Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log(event.target.name, this.state.term, this.state.location);
   }
 
- // https://www.yelp.com/search?find_desc=Restaurants&find_loc=berlin
 
   submit(event) {
     event.preventDefault();
     const team_url = encodeURI(this.state.term)
     const location_url = encodeURI(this.state.location)
     this.props.history.push( `/search?find_desc=${team_url}&find_loc=${location_url}`  );
-    // alert("You are submitting " + this.state.term);
-    console.log(this.state.term, "hello sri ur close man do this brooo");
-     event.preventDefault(); 
   }
   render() {
     return (
@@ -60,9 +55,9 @@ class Search_Bar extends React.Component {
                   placeholder="address, neighorhood, city, state"
                 />
               </p>
-
               <div>
-                <Link    >      
+
+                <Link >      
                 <button type="submit" className={`button ${styles.button_red}`}    onClick={this.submit.bind(this)  }>
                   <span className="icon">
                     <i className="fas fa-search"></i>
