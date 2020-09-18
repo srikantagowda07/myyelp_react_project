@@ -12,7 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        
         <Route path='/search' component={Search} />
           <Route exact path='/' component={LandingPage} />
           <Route path='/writereview' component={Write_review} />
