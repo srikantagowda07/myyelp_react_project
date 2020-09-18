@@ -1,22 +1,16 @@
-import React from 'react';
-// import { render } from '@testing-library/react';
-import Nav_bar from './nav_bar/nav_bar_search_page'
-import Search_results_list from './search_list/search_result_list'
-//import styles from './seacrh.module.css'
-
+import React from "react";
+import Nav_bar from "./nav_bar/nav_bar_search_page";
 
 class search extends React.Component {
-
-render() {
+  render() {
     return (
-        <div>   
-        <div><Nav_bar/></div>
-        <div> <Search_results_list/> </div>        
+      <div>
+        <div>
+          <Nav_bar />
+        </div>
       </div>
-    
-    )
-}
+    );
+  }
 }
 
-
-export default search
+export default search;
