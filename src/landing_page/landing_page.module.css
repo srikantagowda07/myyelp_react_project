@@ -13,10 +13,7 @@
 .landing {
     display: flex;
     flex-direction: column;
-    background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/6b30e7f8206f/assets/img/home/hero_photos/atHzOuzY6J-kKdgKQnCDQQ.jpg);
-    /* background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/65e6a224ada4/assets/img/home/hero_photos/cz8iYo13MpBBGlFLlkA8Sw.jpg); */
-    /* background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/6259bbd502d7/assets/img/home/hero_photos/lfNjhsMKDzqKndhTcb_Xfw.jpg); */
-    /* background-image: url("https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/884c12b285fc/assets/img/home/hero_photos/TdClV4QlpucjFX4GdPc2QQ.jpg"); */
+    background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/65e6a224ada4/assets/img/home/hero_photos/cz8iYo13MpBBGlFLlkA8Sw.jpg);
     background-repeat: no-repeat;
     padding-top: 30px;
     height: 570px;
@@ -46,7 +43,7 @@
 
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 1200px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -63,24 +60,18 @@
     font-size: 20px;
 }
 
-
-
-/* ////////////////////////////////////////////////////////////////////////// */
-
-
-
 .container {
     width: 450px;
-    height: 100%;
     margin-left: 1%;
     display: flex;
     padding: 15px;
+    margin-right: 8rem;
     border-radius: 15px;
     border: 1px solid #eeeeef;
 }
 
 .business-image {
-   margin-right: 10px;
+    margin-right: 10px;
     padding: 5px;
     width: 240px;
     height: 180px;
@@ -96,8 +87,6 @@
     transform: scale(1.01)
 }
 
-
-
 .containerflex {
     margin-right: 55px;
     display: flex;
@@ -105,15 +94,17 @@
     margin-bottom: 15px;
 }
 
-
 .font {
     color: blue
 }
 
+button {
+    float: right;
+    background-color: white;
+    border: 2px solid white;
+    font-size: large;
+}
 
-button{
-float: right;    
-background-color: white;
-border: 2px solid white;
-font-size: large;
+.font_weight {
+    font-weight: 900;
 }
