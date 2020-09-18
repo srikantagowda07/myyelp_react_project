@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Search_result.module.css";
 import BusinessRating from "./Businessrating/Business_rating";
-import { Link } from "react-router-dom";
-import Write_review from "../../../Write_review/Write_review";
 
 class Search_result extends React.Component {
   render() {
