@@ -1,0 +1,107 @@
+.logo {
+    width: 180px;
+    height: 80px;
+    margin: 50px 0;
+}
+
+.search-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/65e6a224ada4/assets/img/home/hero_photos/cz8iYo13MpBBGlFLlkA8Sw.jpg);
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    height: 570px;
+    background-color: #333;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+}
+
+.belb_logo {
+    margin: 10px auto 20px;
+    display: block;
+    width: 170px;
+    height: 80px;
+    margin-top: 6rem;
+}
+
+.center {
+    text-align: center;
+    color: snow;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.landing_page_recomendation_section {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.review_heading {
+    margin-top: 25px;
+    color: #cb3434;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    font-size: 20px;
+}
+
+.container {
+    width: 450px;
+    margin-left: 1%;
+    display: flex;
+    padding: 15px;
+    margin-right: 8rem;
+    border-radius: 15px;
+    border: 1px solid #eeeeef;
+}
+
+.business-image {
+    margin-right: 10px;
+    padding: 5px;
+    width: 240px;
+    height: 180px;
+    border-radius: 5%;
+}
+
+.contact-info {
+    margin-left: auto;
+    margin-right: 500px;
+}
+
+.container:hover {
+    transform: scale(1.01)
+}
+
+.containerflex {
+    margin-right: 55px;
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.font {
+    color: blue
+}
+
+button {
+    float: right;
+    background-color: white;
+    border: 2px solid white;
+    font-size: large;
+}
+
+.font_weight {
+    font-weight: 900;
+}
